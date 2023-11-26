@@ -1,2 +1,134 @@
-@import './blocks/header';
-@import './blocks/footer';
+@import './fonts.scss';
+@import './normalize&zero.scss';
+
+
+:root {
+  --font: "Inter", sans-serif;
+  --font-light: "InterLight", sans-serif;
+  --title-font: "InterSemiBold", sans-serif;
+  --corp-violet: #4f007d;
+  --violet: #660066;
+  --blue: #34226B;
+  --p: 24px;
+  font-size: 36px;
+}
+
+body {
+  min-width: 320px;
+  max-width: 100%;
+  font-family: var(--font);
+  color: black;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  transition: all .25s linear;
+  background-color: transparent;
+}
+
+button:hover {
+  box-shadow: 1px 1px 5px 1px rgba(15, 20, 24, 0.35);
+}
+
+h2 {
+  font-size: 1rem;
+  font-family: var(--title-font);
+  text-align: center;
+}
+
+.full-warpper {
+  width: 100%;
+}
+
+.warpper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.gradient {
+  background: rgb(115, 0, 102);
+  background: linear-gradient(90deg, rgba(115, 0, 102, 1) 0%, rgba(102, 0, 102, 1) 50%, rgba(79, 0, 125, 1) 100%);
+}
+
+
+.df--js-sb--ai-c {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.df--fd-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.df--ai-c {
+  display: flex;
+  align-items: center;
+}
+
+.pos-s {
+  position: sticky;
+  top: 0;
+}
+
+.pos-r {
+  position: relative;
+}
+
+.mt-1-5 {
+  margin-top: 1.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-0-5 {
+  margin-top: .5rem;
+}
+
+.mt-0-75 {
+  margin-top: .75rem;
+}
+
+.fz-0 {
+  font-size: 0;
+}
+
+.violet {
+  background-color: var(--violet);
+}
+
+.corp-violet {
+  background-color: var(--corp-violet);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.white {
+  color: white;
+}
+
+@import './blocks-scss/header';
+@import './blocks-scss/about-us';
+@import './blocks-scss/footer';
+@import './blocks-scss/our-production.scss';
+@import './blocks-scss/made-in-kaz.scss';
+@import './blocks-scss/reviews'

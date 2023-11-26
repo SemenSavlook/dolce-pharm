@@ -1,5 +1,6 @@
 /* eslint-disable no-undef */
 const gulp = require('gulp');
+const path = require('path');
 
 // HTML
 const fileInclude = require('gulp-file-include');
@@ -83,7 +84,7 @@ gulp.task('scss', function () {
   return gulp
     .src('./src/scss/main.scss')
     .pipe(changed('./dist/'))
-    .pipe(plumber(plumberNotify('Styles')))
+    // .pipe(plumber(plumberNotify('Styles')))
     .pipe(sourceMaps.init())
     .pipe(sassGlob())
     // .pipe(groupMediaQueries())
