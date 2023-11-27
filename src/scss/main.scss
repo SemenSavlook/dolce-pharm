@@ -29,6 +29,8 @@ img {
 button {
   transition: all .25s linear;
   background-color: transparent;
+  border-radius: 10px;
+  font-size: .5rem;
 }
 
 button:hover {

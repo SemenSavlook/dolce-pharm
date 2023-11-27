@@ -38,5 +38,8 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "dependencies": {
+    "gulp-replace": "^1.1.4"
   }
 }

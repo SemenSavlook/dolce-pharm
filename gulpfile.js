@@ -6,6 +6,7 @@ const path = require('path');
 const fileInclude = require('gulp-file-include');
 const htmlclean = require('gulp-htmlclean');
 const webpHTML = require('gulp-webp-html');
+const replace = require('gulp-replace');
 
 // SASS
 const sass = require('gulp-sass')(require('sass'));
@@ -21,7 +22,6 @@ const rename = require('gulp-rename');
 const sourceMaps = require('gulp-sourcemaps');
 const groupMediaQueries = require('gulp-group-css-media-queries');
 const plumber = require('gulp-plumber');
-// eslint-disable-next-line no-unused-vars
 const notify = require('gulp-notify');
 
 const webpack = require('webpack-stream');
@@ -46,9 +46,11 @@ gulp.task('clean', function (done) {
 
 const plumberNotify = (title) => {
   return {
-    title: title,
-    message: 'Errpr<%= error.message %>',
-    sound: false
+    errorHandler: notify.onError({
+      title: title,
+      message: 'Errpr<%= error.message %>',
+      sound: false
+    })
   }
 }
 
@@ -62,18 +64,18 @@ gulp.task('html', function () {
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(replace(/\.\.\//gi, ''))
     .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('html:prod', function () {
   return gulp
     .src([ './src/*.html' ])
-    // .pipe(changed('./dist/'))
-    // .pipe(plumber(plumberNotify('HTML')))
     .pipe(fileInclude({
       prefix: '@@',
       basepath: '@file'
     }))
+    .pipe(replace(/\.\.\//gi, ''))
     .pipe(webpHTML())
     .pipe(htmlclean())
     .pipe(gulp.dest('./dist'));
@@ -84,7 +86,7 @@ gulp.task('scss', function () {
   return gulp
     .src('./src/scss/main.scss')
     .pipe(changed('./dist/'))
-    // .pipe(plumber(plumberNotify('Styles')))
+    .pipe(plumber(plumberNotify('Styles')))
     .pipe(sourceMaps.init())
     .pipe(sassGlob())
     // .pipe(groupMediaQueries())
@@ -97,9 +99,7 @@ gulp.task('scss', function () {
 gulp.task('scss:prod', function () {
   return gulp
     .src('./src/scss/main.scss')
-    // .pipe(changed('./dist/'))
-    // .pipe(plumber(plumberNotify('Styles')))
-    // .pipe(sourceMaps.init())
+    .pipe(plumber(plumberNotify('Styles')))
     .pipe(sassGlob())
     .pipe(webpCss())
     .pipe(groupMediaQueries())
@@ -108,7 +108,6 @@ gulp.task('scss:prod', function () {
       cascade: false
     }))
     .pipe(csso())
-    // .pipe(sourceMaps.write())
     .pipe(rename('styles.css'))
     .pipe(gulp.dest('./dist/'))
 });
