@@ -1,0 +1,38 @@
+.offer {
+  .offer--text {
+    padding: 40px;
+
+    h3 {
+      color: white;
+      font-size: 1rem;
+      font-family: var(--font-light);
+
+    }
+
+    button {
+      margin-top: 20px;
+      color: var(--corp-violet);
+      background-color: white;
+    }
+  }
+
+  .offer--image {
+    align-self: flex-end;
+    min-height: 100px;
+    margin-right: 20px;
+  }
+
+  .offer--image,
+  img {
+    width: 250px;
+    flex-shrink: 0;
+
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+    }
+  }
+
+}

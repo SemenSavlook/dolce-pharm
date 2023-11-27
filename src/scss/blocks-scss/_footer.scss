@@ -2,4 +2,14 @@
   color: white;
   background-color: #311B4C;
   min-height: 20px;
+  font-size: 16px;
+  padding: 20px;
+
+  address {
+    display: flex;
+    gap: 20px;
+    line-height: 1.5;
+    justify-content: space-between;
+    flex-grow: 2;
+  }
 }

@@ -29,7 +29,7 @@ img {
 button {
   transition: all .25s linear;
   background-color: transparent;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: .5rem;
 }
 
@@ -37,9 +37,20 @@ button:hover {
   box-shadow: 1px 1px 5px 1px rgba(15, 20, 24, 0.35);
 }
 
+button.button {
+  padding: 12px;
+}
+
 h2 {
   font-size: 1rem;
   font-family: var(--title-font);
+  text-align: center;
+}
+
+h3 {
+  font-size: 1rem;
+  font-family: var(--title-font);
+  color: var(--violet);
   text-align: center;
 }
 
@@ -61,11 +72,14 @@ h2 {
   padding: 20px;
 }
 
+.mr-m {
+  margin-right: 20px;
+}
+
 .gradient {
   background: rgb(115, 0, 102);
   background: linear-gradient(90deg, rgba(115, 0, 102, 1) 0%, rgba(102, 0, 102, 1) 50%, rgba(79, 0, 125, 1) 100%);
 }
-
 
 .df--js-sb--ai-c {
   display: flex;
@@ -76,6 +90,12 @@ h2 {
 .df--fd-c {
   display: flex;
   flex-direction: column;
+}
+
+.df--ai-c--jc-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .df--ai-c {
@@ -98,6 +118,10 @@ h2 {
 
 .mt-1 {
   margin-top: 1rem;
+}
+
+.mt-0-25 {
+  margin-top: .25rem;
 }
 
 .mt-0-5 {
@@ -132,5 +156,6 @@ h2 {
 @import './blocks-scss/about-us';
 @import './blocks-scss/footer';
 @import './blocks-scss/our-production.scss';
+@import './blocks-scss/offer';
 @import './blocks-scss/made-in-kaz.scss';
 @import './blocks-scss/reviews'

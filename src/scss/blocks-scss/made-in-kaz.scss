@@ -1,3 +1,18 @@
 .made-in-kaz {
   background-color: #e6f7f9;
+
+  .container {
+    padding: 30px 20px;
+  }
+
+  .image {
+    min-width: 160px;
+    margin-right: 1.5rem;
+  }
+
+  .text {
+    font-family: var(--font-light);
+    font-size: 32px;
+    color: #808080;
+  }
 }

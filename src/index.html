@@ -30,7 +30,7 @@
     </div>
   </header>
   <main>
-    <section class="container mt-0-5">
+    <section class="container mt-0-25">
       <h1 class="visually-hidden">Акционные предложения на медецинские изделия</h1>
       <img src="./img/temp-01.jpg" alt="">
     </section>
@@ -53,15 +53,30 @@
       </div>
     </section>
   </main>
+
   <section class="our-production mt-1-5">
     <h2 class="gradient padding white">Наша продукция</h2>
     <div class="container">
       @@include('./html-blocks/our-production-list.html')
+      <div class="mt-1 df--ai-c--jc-c">
+        <button class="buttons violet mr-m">Получить каталог</button>
+        <button class="buttons corp-violet">Получить прайс</button>
+      </div>
     </div>
   </section>
-  <section class="offer mt-1-5">
-    <h3>Скидка 5% при первом заказе<br>Бесплатная доставка при первом заказе</h3>
+
+  <section class="offer mt-1-5 gradient">
+    <div class="container df--js-sb--ai-c">
+      <div class="offer--text">
+        <h3>Скидка 5% при первом заказе<br>Бесплатная доставка при первом заказе</h3>
+        <button class="button">Заказать</button>
+      </div>
+      <div class="offer--image pos-r">
+        <img src="./img/doctor-image.png" alt="">
+      </div>
+    </div>
   </section>
+
   <section class="advantages mt-1-5">
     <h3>Сложности при заказе медицинских изделий</h3>
     <ul>
@@ -85,14 +100,24 @@
     </ul>
 
   </section>
+
   <section class="made-in-kaz mt-1-5">
-    <p>Наши изделия, медицинского назначения, производятся в&nbsp;Казахстане, с&nbsp;использованием передовых технологий
-      и&nbsp;высоких стандартов. Мы&nbsp;гордимся поддержкой отечественного производства, предоставляя надежные
-      и&nbsp;качественные продукты.</p>
+    <div class="container df--ai-c">
+      <div class="image">
+        <img src="./img/M-in-K.png" alt="Made in Kazakhstan">
+      </div>
+      <p class="text">Наши изделия, медицинского назначения, производятся в&nbsp;Казахстане, с&nbsp;использованием
+        передовых
+        технологий
+        и&nbsp;высоких стандартов. Мы&nbsp;гордимся поддержкой отечественного производства, предоставляя надежные
+        и&nbsp;качественные продукты.</p>
+    </div>
   </section>
+
   <section class="reviews mt-1-5">
     <h3>Отзывы наших клиентов</h3>
   </section>
+
   @@include('./html-blocks/footer.html')
 </body>
 
