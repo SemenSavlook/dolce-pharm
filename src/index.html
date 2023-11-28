@@ -8,26 +8,10 @@
 <body>
   @@include('./html-blocks/svg-sprite.svg')
   <header class="header pos-s">
-    <div class="df--js-sb--ai-c container">
-      <div class="logo">
-        <a href="#">
-          <img src="./img/logo-Dolce-Pharm.png" alt="Logo Dolce pharm">
-        </a>
-      </div>
-      <div class="df--js-sb--ai-c">
-        <button class="header-button violet">Получить каталог</button>
-        <button class="header-button blue">Получить прайс</button>
-        <button class="header-button corp-violet">Оставить завку</button>
-        <button class="fz-0">
-          <svg>
-            <use xlink:href="#phone-list"></use>
-          </svg>
-        </button>
-      </div>
-    </div>
+    @@include('./html-blocks/header.html')
   </header>
   <main>
-    <section class="container mt-0-25">
+    <section class="baner mt-0-25">
       <h1 class="visually-hidden">Акционные предложения на медецинские изделия</h1>
       <img src="./img/temp-01.jpg" alt="">
     </section>
@@ -52,7 +36,7 @@
   </main>
 
   <section class="our-production mt-1-5">
-    <h2 class="gradient padding white">Наша продукция</h2>
+    <h2 class="gradient white">Наша продукция</h2>
     <div class="container">
       @@include('./html-blocks/our-production-list.html')
       <div class="mt-1 df--ai-c--jc-c">
@@ -100,7 +84,7 @@
     <div class="positive mt-1">
       <div class="container padding">
         <h3>Преимущества работы с&nbsp;DOLCE&nbsp;PHARM</h3>
-        <ul class="mt-0-75">
+        <ul class="mt-1">
           <li>Экономия Вашего бюджета</li>
           <li>Широкий ассортимент продукции и Международные стандарты качества</li>
           <li>Эксклюзивные продукты на рынке медицинских изделий</li>
@@ -132,6 +116,24 @@
 
   <section class="reviews mt-1-5">
     <h3>Отзывы наших клиентов</h3>
+    <div class="container reviews--block">
+      <div class="reviews--item">
+        <img src="./img/reviews/rev-abdi-745x1024.jpg" alt="">
+        <p class="mt-0-5">Abdi</p>
+      </div>
+      <div class="reviews--item">
+        <img src="./img/reviews/rev-adal-745x1024.jpg" alt="">
+        <p class="mt-0-5">Adal</p>
+      </div>
+      <div class="reviews--item">
+        <img src="./img/reviews/rev-galaxy-745x1024.jpg" alt="">
+        <p class="mt-0-5">Galaxy</p>
+      </div>
+      <div class="reviews--item">
+        <img src="./img/reviews/rev-hosp-745x1024.jpg" alt="">
+        <p class="mt-0-5">Родильный дом №1</p>
+      </div>
+    </div>
   </section>
 
   <footer class="footer mt-1-5">
