@@ -42,13 +42,13 @@ button.button {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: var(--title-font);
   text-align: center;
 }
 
 h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: var(--title-font);
   color: var(--violet);
   text-align: center;
@@ -101,6 +101,10 @@ h3 {
 .df--ai-c {
   display: flex;
   align-items: center;
+}
+
+.m-0-a {
+  margin: 0 auto;
 }
 
 .pos-s {
@@ -158,4 +162,5 @@ h3 {
 @import './blocks-scss/our-production.scss';
 @import './blocks-scss/offer';
 @import './blocks-scss/made-in-kaz.scss';
+@import './blocks-scss/advantages';
 @import './blocks-scss/reviews'

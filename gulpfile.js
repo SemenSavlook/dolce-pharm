@@ -147,6 +147,15 @@ gulp.task('files', function () {
     .pipe(gulp.dest('./dist/files/'));
 });
 
+
+// копирование из папки root в корень
+gulp.task('filesToRoot', function () {
+  return gulp
+    .src('./src/toRoot/**/*')
+    .pipe(changed('./dist/'))
+    .pipe(gulp.dest('./dist/'));
+});
+
 // Обработка JS файлов
 
 const configDev = {
@@ -234,7 +243,7 @@ gulp.task('watch', function () {
 // Дефолтный запуск
 gulp.task('default', gulp.series(
   'clean',
-  gulp.parallel('html', 'scss', 'images', 'fonts', 'files', 'js'),
+  gulp.parallel('filesToRoot', 'html', 'scss', 'images', 'fonts', 'files', 'js'),
   gulp.parallel('server', 'watch')
 ));
 

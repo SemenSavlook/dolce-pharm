@@ -1,0 +1,66 @@
+.advantages {
+  .negatives {
+    max-width: 1200px;
+    margin-top: 10px;
+
+    li:not(:last-child) {
+      border-bottom: 1px solid #989898;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+
+
+      p {
+        display: inline-block;
+        font-size: 24px;
+      }
+
+      span {
+        width: 40px;
+        flex-shrink: 0;
+        font-size: 36px;
+        color: #801549;
+        font-family: var(--font-light);
+      }
+    }
+  }
+
+  .positive {
+    background-color: #f2f2f2;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: space-evenly;
+    }
+
+    li {
+      // width: 360px;
+      height: 200px;
+      flex-basis: 340px;
+      flex-shrink: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      padding: 15px;
+      font-family: var(--title-font);
+      font-size: 22px;
+      line-height: 1.2;
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: var(--violet);
+      background-image: url('./img/decor.jpg');
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+}
