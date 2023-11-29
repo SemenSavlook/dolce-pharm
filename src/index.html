@@ -7,9 +7,9 @@
 
 <body>
   @@include('./html-blocks/svg-sprite.svg')
-  <header class="header pos-s">
-    @@include('./html-blocks/header.html')
-  </header>
+
+  @@include('./html-blocks/header.html')
+
   <main>
     <section class="baner mt-0-25">
       <h1 class="visually-hidden">Акционные предложения на медецинские изделия</h1>
@@ -40,8 +40,8 @@
     <div class="container">
       @@include('./html-blocks/our-production-list.html')
       <div class="mt-1 df--ai-c--jc-c">
-        <button class="buttons violet mr-m">Получить каталог</button>
-        <button class="buttons corp-violet">Получить прайс</button>
+        <button class="button violet mr-m">Скачать каталог</button>
+        <button class="button blue">Получить прайс</button>
       </div>
     </div>
   </section>
@@ -118,28 +118,92 @@
     <h3>Отзывы наших клиентов</h3>
     <div class="container reviews--block">
       <div class="reviews--item">
-        <img src="./img/reviews/rev-abdi-745x1024.jpg" alt="">
+        <div class="reviews--item__image">
+          <img src="./img/reviews/rev-abdi-745x1024.jpg" alt="">
+        </div>
         <p class="mt-0-5">Abdi</p>
       </div>
       <div class="reviews--item">
-        <img src="./img/reviews/rev-adal-745x1024.jpg" alt="">
+        <div class="reviews--item__image">
+          <img src="./img/reviews/rev-adal-745x1024.jpg" alt="">
+        </div>
         <p class="mt-0-5">Adal</p>
       </div>
       <div class="reviews--item">
-        <img src="./img/reviews/rev-galaxy-745x1024.jpg" alt="">
+        <div class="reviews--item__image">
+          <img src="./img/reviews/rev-galaxy-745x1024.jpg" alt="">
+        </div>
         <p class="mt-0-5">Galaxy</p>
       </div>
       <div class="reviews--item">
-        <img src="./img/reviews/rev-hosp-745x1024.jpg" alt="">
+        <div class="reviews--item__image">
+          <img src="./img/reviews/rev-hosp-745x1024.jpg" alt="">
+        </div>
         <p class="mt-0-5">Родильный дом №1</p>
       </div>
     </div>
   </section>
 
-  <footer class="footer mt-1-5">
-    @@include('./html-blocks/footer.html')
-  </footer>
+  @@include('./html-blocks/footer.html')
 
+  <script src="./js/index.bundle.js"></script>
+
+  <div class="modal-phone">
+    <div class="modal-phone--wrapper">
+
+      <div>
+        <button class="fz-0 modal-close" title="Закрыть">
+          <svg>
+            <use xlink:href="#close"></use>
+          </svg>
+        </button>
+      </div>
+
+      <h6>Связаться с нами</h6>
+
+      <ul class="modal-phone--list">
+
+        <li>
+          <label>
+            <svg>
+              <use xlink:href="#phone"></use>
+            </svg>
+            <a href="tel:+77711041201">+7 771 104 1201</a>
+          </label>
+        </li>
+
+        <li>
+          <label>
+            <svg>
+              <use xlink:href="#wa"></use>
+            </svg>
+            <a href="tel:+77711041201">+7 771 104 1201</a>
+          </label>
+        </li>
+
+        <li>
+          <label>
+            <svg>
+              <use xlink:href="#ig"></use>
+            </svg>
+            <a href="#">@dolce</a>
+          </label>
+        </li>
+
+        <li>
+          <label>
+            <svg>
+              <use xlink:href="#email"></use>
+            </svg>
+            <a href="mailto:vmarketolog@dolcepharm.kz">vmarketolog@dolcepharm.kz</a>
+          </label>
+        </li>
+
+      </ul>
+
+      <div class="df--ai-c--jc-c mt-0-5"><button class="button button-light">Закрыть</button></div>
+    </div>
+  </div>
 </body>
 
 </html>

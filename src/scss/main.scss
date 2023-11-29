@@ -26,19 +26,37 @@ img {
   height: auto;
 }
 
+a {
+  color: inherit;
+}
+
 button {
-  transition: all .25s linear;
   background-color: transparent;
+  position: relative;
+  font-family: var(--font);
+}
+
+.button {
+  transition: all .25s linear;
   border-radius: 8px;
   font-size: .5rem;
-}
-
-button:hover {
-  box-shadow: 1px 1px 5px 1px rgba(15, 20, 24, 0.35);
-}
-
-button.button {
+  display: inline-block;
   padding: 12px;
+  color: white;
+}
+
+.button:hover {
+  box-shadow: 1px 1px 5px 1px rgba(15, 20, 24, 0.35);
+  top: -1px;
+}
+
+.button-light {
+  background-color: #E5D9EC;
+  color: var(--corp-violet)
+}
+
+.button-light:hover {
+  box-shadow: 1px 1px 1px 1px rgba(15, 20, 24, 0.05);
 }
 
 h2 {
@@ -171,4 +189,5 @@ h3 {
 @import './blocks-scss/offer';
 @import './blocks-scss/made-in-kaz.scss';
 @import './blocks-scss/advantages';
-@import './blocks-scss/reviews'
+@import './blocks-scss/reviews';
+@import './blocks-scss/modals';

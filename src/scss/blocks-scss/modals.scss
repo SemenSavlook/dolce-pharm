@@ -1,0 +1,59 @@
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+
+  svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.modal-close:hover {
+  top: 9px;
+}
+
+.modal-phone {
+  max-width: 500px;
+  position: relative;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .15);
+
+
+  h6 {
+    font-size: .9rem;
+    color: var(--corp-violet);
+    font-family: var(--title-font);
+    text-align: center;
+  }
+}
+
+.modal-phone--list {
+  margin-top: 20px;
+
+  label {
+    cursor: pointer;
+    display: block;
+    font-size: .7rem;
+    color: #989898;
+    display: flex;
+    align-items: center;
+  }
+
+  li {
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  li:hover {
+    background-color: #fdf9ff9a;
+  }
+
+  svg {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+  }
+}
