@@ -1,7 +1,6 @@
 .header {
-  background-color: rgba(white, .97);
+  background-color: rgba(white, .96);
   z-index: 10;
-  padding: 12px 0;
 
   .header-button {
     margin-right: 20px;
@@ -21,6 +20,13 @@
   .logo {
     margin-right: 20px;
   }
+
+  .header-buttons {
+    position: relative;
+
+  }
 }
+
+
 
 @media (max-width: 1620px) {}
