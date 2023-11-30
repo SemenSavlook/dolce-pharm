@@ -2,12 +2,12 @@
   opacity: 1;
   visibility: visible;
   top: -10px;
-  transition: opacity .75s ease-in-out, visibility 0s, top .5s linear;
+  transition: opacity .5s ease-in-out, visibility 0s, top .25s linear;
   overflow: auto;
 }
 
 .modal-phone {
-  transition: opacity .75s ease-in-out, visibility 0s .75s, top .5s linear;
+  transition: opacity .5s ease-in-out, visibility 0s .5s, top .25s linear;
   visibility: hidden;
   opacity: 0;
   max-width: 450px;

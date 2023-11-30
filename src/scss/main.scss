@@ -196,6 +196,31 @@ h3 {
   margin: 0 auto;
 }
 
+@media (max-width: 1200px) {
+  :root {
+    font-size: 32px;
+  }
+
+}
+
+@media (max-width: 992px) {
+  :root {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
 @import './blocks-scss/header';
 @import './blocks-scss/about-us';
 @import './blocks-scss/footer';

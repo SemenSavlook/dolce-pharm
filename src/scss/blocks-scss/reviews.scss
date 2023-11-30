@@ -12,6 +12,12 @@
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 1px 6px 1px rgba(29, 29, 29, 0.11);
+    transition: transform .5s;
+  }
+
+  .reviews--item__image:hover {
+    transform: scale(1.05);
+    cursor: pointer;
   }
 
   p {
