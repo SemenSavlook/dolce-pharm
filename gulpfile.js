@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const gulp = require('gulp');
 const path = require('path');
 
@@ -76,7 +77,7 @@ gulp.task('html:prod', function () {
       basepath: '@file'
     }))
     .pipe(replace(/\.\.\//gi, ''))
-    .pipe(webpHTML())
+    // .pipe(webpHTML())
     .pipe(htmlclean())
     .pipe(gulp.dest('./dist'));
 });
@@ -101,13 +102,13 @@ gulp.task('scss:prod', function () {
     .src('./src/scss/main.scss')
     .pipe(plumber(plumberNotify('Styles')))
     .pipe(sassGlob())
-    .pipe(webpCss())
+    // .pipe(webpCss())
     .pipe(groupMediaQueries())
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
     }))
-    .pipe(csso())
+    // .pipe(csso())
     .pipe(rename('styles.css'))
     .pipe(gulp.dest('./dist/'))
 });
@@ -124,11 +125,11 @@ gulp.task('images', function () {
 gulp.task('images:prod', function () {
   return gulp
     .src('./src/img/**/*')
-    .pipe(webp())
+    // .pipe(webp())
     .pipe(gulp.dest('./dist/img/'))
-    .pipe(gulp.src([ './dist/img/**/*.+(png|jpg|bmp|jpeg|jpeg2)', '!./dist/img/**/*.+(webp|svg)' ]))
-    .pipe(imagemin({ verbose: true }))
-    .pipe(gulp.dest('./dist/img/'));
+  // .pipe(gulp.src([ './dist/img/**/*.+(png|jpg|bmp|jpeg|jpeg2)', '!./dist/img/**/*.+(webp|svg)' ]))
+  // .pipe(imagemin({ verbose: true }))
+  // .pipe(gulp.dest('./dist/img/'));
 });
 
 // копирование папки fonts

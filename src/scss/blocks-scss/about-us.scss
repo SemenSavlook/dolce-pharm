@@ -24,5 +24,48 @@
 }
 
 .about-us--descr {
-  background-color: rgba(255, 255, 255, 0.356)
+  background-color: rgba(255, 255, 255, 0.45)
+}
+
+
+@media (max-width: 768px) {
+  :root {
+    --p: 18px;
+  }
+
+  .about-us h2 {
+    font-size: 1rem;
+  }
+
+  .about-us--title .logo {
+    width: 250px;
+  }
+}
+
+@media (max-width: 490px) {
+  .about-us {
+    padding: 20px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --p: 16px;
+  }
+
+  .about-us--title .logo {
+    width: 200px;
+  }
+}
+
+@media (max-width: 490px) {
+  .about-us--title .logo {
+    width: 160px;
+  }
+}
+
+@media (max-width: 350px) {
+  .about-us h2 {
+    font-size: 20px;
+  }
 }

@@ -3,6 +3,7 @@
   gap: 40px;
   justify-content: center;
   margin-top: 5px;
+  flex-wrap: wrap;
 }
 
 .reviews--item {
@@ -24,4 +25,25 @@
     text-align: center;
     color: #666666;
   }
+}
+
+@media (max-width: 768px) {
+  .reviews--block {
+    gap: 30px;
+  }
+
+  .reviews--item {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 400px) {
+  .reviews--item {
+    max-width: 140px;
+  }
+
+  .reviews--block {
+    gap: 20px;
+  }
+
 }

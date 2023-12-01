@@ -53,6 +53,10 @@
       max-width: 150px;
       min-width: auto;
     }
+
+    .container {
+      padding: 20px;
+    }
   }
 }
 
@@ -70,16 +74,58 @@
     .header-button {
       margin-right: 15px;
     }
+
+    .button-price {
+      display: none;
+    }
   }
 }
 
 @media (max-width: 650px) {
   .header {
-    img {
-      max-width: 90px;
-      min-width: auto;
+    .container {
+      padding: 20px;
     }
   }
 }
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+  .header {
+    .button {
+      font-size: .55rem;
+    }
+
+    .button-download {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .header {
+    .container {
+      padding: 15px 20px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    img {
+      max-width: 100px;
+    }
+
+  }
+
+  .mr-m {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 350px) {
+  .header {
+    img {
+      max-width: 80px;
+    }
+  }
+}

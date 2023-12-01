@@ -1,7 +1,7 @@
 .modal-phone.visible {
   opacity: 1;
   visibility: visible;
-  top: -10px;
+  // top: -10px;
   transition: opacity .5s ease-in-out, visibility 0s, top .25s linear;
   overflow: auto;
 }
@@ -87,4 +87,10 @@
 .modal-close:hover {
   top: 11px;
   opacity: 1;
+}
+
+@media (max-width: 650px) {
+  .modal-phone.visible {
+    padding: 16px;
+  }
 }

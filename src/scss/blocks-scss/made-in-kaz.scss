@@ -1,6 +1,15 @@
 .made-in-kaz {
   background-color: #e6f7f9;
 
+  .image-h {
+    display: none;
+  }
+
+  .made-in-kaz-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   .container {
     padding: 30px 40px;
     max-width: 1550px;
@@ -16,4 +25,89 @@
     font-size: 32px;
     color: #808080;
   }
+}
+
+@media (max-width: 1200px) {
+
+  .made-in-kaz .text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .made-in-kaz .text {
+    font-size: 24px;
+  }
+
+  .made-in-kaz .image {
+    min-width: 100px;
+    margin-right: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .made-in-kaz .text {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 650px) {
+  .made-in-kaz .text {
+    font-size: 20px;
+  }
+
+  .made-in-kaz .image {
+    min-width: 100px;
+  }
+
+  .made-in-kaz .container {
+    padding: 20px;
+  }
+
+  .made-in-kaz .image {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .made-in-kaz .image {
+    min-width: 90px;
+  }
+
+  .made-in-kaz .text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 490px) {
+  .made-in-kaz .made-in-kaz-wrapper {
+    flex-direction: column;
+  }
+
+  .made-in-kaz .image {
+    min-width: 70px;
+    margin-right: 0;
+  }
+
+  .made-in-kaz .image-v {
+    display: none;
+  }
+
+  .made-in-kaz .image-h {
+    max-width: 260px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .made-in-kaz .image-h {
+    max-width: 240px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
 }
