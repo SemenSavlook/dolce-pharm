@@ -238,7 +238,7 @@ gulp.task('watch', function () {
   gulp.watch('./src/img/**.*', gulp.parallel('images'));
   gulp.watch('./src/img/**.*', gulp.parallel('fonts'));
   gulp.watch('./src/img/**.*', gulp.parallel('files'));
-  gulp.watch('./src/js/**.*', gulp.parallel('js'));
+  gulp.watch('./src/js/**/*.*', gulp.parallel('js'));
 });
 
 // Дефолтный запуск

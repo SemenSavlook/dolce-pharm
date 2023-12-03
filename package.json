@@ -40,6 +40,7 @@
     ]
   },
   "dependencies": {
-    "gulp-replace": "^1.1.4"
+    "gulp-replace": "^1.1.4",
+    "swiper": "^11.0.5"
   }
 }
