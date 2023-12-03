@@ -84,15 +84,31 @@
   .offer .offer--text h3 {
     font-size: 22px;
   }
+
+  .offer .offer--image,
+  .offer img {
+    width: 140px;
+  }
+
+  .offer .offer--image {
+    position: absolute;
+    right: -40px;
+  }
+
+  .offer .offer--text {
+    padding-right: 60px;
+  }
+
+  .offer {
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 400px) {
 
-  .offer .offer--image {
-    display: none;
-  }
 
-  .offer .offer--text {
-    padding: 30px 0;
+  .offer .offer--image,
+  .offer img {
+    width: 130px;
   }
 }
