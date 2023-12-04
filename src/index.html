@@ -56,7 +56,7 @@
     <div class="container">
       @@include('./html-blocks/our-production-list.html')
       <div class="mt-1 df--ai-c--jc-c">
-        <a class="button violet mr-m" href="./files/Dolce-catalog.pdf" download>Скачать каталог</a>
+        <a class="button violet mr-m" href="./files/Dolce-catalog.pdf" target="_blank">Скачать каталог</a>
         <button class="button blue js-modal-request-buttons">Получить прайс</button>
       </div>
     </div>
@@ -101,16 +101,16 @@
       <div class="container padding">
         <h3>Преимущества работы с&nbsp;DOLCE&nbsp;PHARM</h3>
         <ul class="mt-0-75">
-          <li>Экономия Вашего бюджета</li>
-          <li>Широкий ассортимент продукции и&nbsp;Международные стандарты качества</li>
-          <li>Эксклюзивные продукты на&nbsp;рынке медицинских изделий</li>
-          <li>Программа лояльности</li>
-          <li>Партнёрские программы</li>
-          <li>Наличие складских помещений</li>
-          <li>Защита от внутрибольничных и&nbsp;других инфекций</li>
-          <li>Гибкая система оплаты</li>
-          <li>Высокий уровень сервиса</li>
-          <li>Конфиденциальность</li>
+          <li><span>✔</span>Экономия Вашего бюджета</li>
+          <li><span>✔</span>Широкий ассортимент продукции и&nbsp;Международные стандарты качества</li>
+          <li><span>✔</span>Эксклюзивные продукты на&nbsp;рынке медицинских изделий</li>
+          <li><span>✔</span>Программа лояльности</li>
+          <li><span>✔</span>Партнёрские программы</li>
+          <li><span>✔</span>Наличие складских помещений</li>
+          <li><span>✔</span>Защита от внутрибольничных и&nbsp;других инфекций</li>
+          <li><span>✔</span>Гибкая система оплаты</li>
+          <li><span>✔</span>Высокий уровень сервиса</li>
+          <li><span>✔</span>Конфиденциальность</li>
         </ul>
       </div>
     </div>
@@ -167,14 +167,27 @@
 
   <div class="modal js-modal-request">
     <div class="modal-wrapper">
-      <h6>Прайс лист доступен юридическим лицам, для получения необходимо заполнить данные</h6>
-      <div class="modal-buttons-block">
-        <button class="button corp-violet mr-m">Заполнить</button>
-        <button class="button button-light js-modal-button-close">Закрыть</button>
+      <div class="modal-before">
+        <h6>Прайс лист доступен юридическим лицам, для&nbsp;получения необходимо заполнить данные</h6>
+        <div class="modal-buttons-block">
+          <button class="button corp-violet mr-m" id="modal-request-coninue-button">Заполнить</button>
+          <button class="button button-light js-modal-button-close">Закрыть</button>
+        </div>
       </div>
-      <form action="#">
-
-      </form>
+      <div class="modal-after">
+        <form action="#" id="js-modal-request-form">
+          <h5>Заполните форму</h5>
+          <input type="text" placeholder="Введите ваше имя" name="full-name" required>
+          <input type="text" placeholder="Название компании" name="company" required>
+          <input type="tel" placeholder="Телефон" name="phone" required>
+          <input type="email" placeholder="Электронная почта" name="email" required>
+          <div class="modal-buttons-block">
+            <button class="button corp-violet mr-m" type="submit" id="modal-submit-request" disabled>Получить
+              прайс</button>
+            <button class="button button-light js-modal-button-close">Закрыть</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 

@@ -94,7 +94,8 @@
   padding: 20px;
 
   .modal-wrapper {
-    max-width: 600px;
+    position: relative;
+    top: -20px;
     border-radius: 8px;
     padding: 25px;
     box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2);
@@ -102,11 +103,18 @@
   }
 
   button {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 
   h6 {
     font-size: 0.6rem;
+    font-family: var(--title-font);
+    color: var(--corp-violet);
+    text-align: center;
+  }
+
+  h5 {
+    font-size: 0.75rem;
     font-family: var(--title-font);
     color: var(--corp-violet);
     text-align: center;
@@ -133,6 +141,29 @@
   justify-content: center;
 }
 
+.modal button:disabled {
+  opacity: .25;
+}
+
+.modal-before {
+  max-width: 500px;
+}
+
+.modal-after {
+  display: none;
+  width: 350px;
+  // display: flex;
+}
+
+.modal-after input {
+  background-color: #EBEBEB;
+  font-size: 17px;
+  padding: 10px 14px;
+  display: block;
+  margin-top: 18px;
+  width: 100%;
+  border-radius: 8px;
+}
 
 
 

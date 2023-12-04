@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
       disableOnInteraction: false
     },
   });
-  console.dir(swiper)
+  // console.dir(swiper)
   modalPhoneHandler();
   modalRequest();
 })
