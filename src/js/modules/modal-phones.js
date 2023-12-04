@@ -7,7 +7,6 @@ function modalPhoneHandler() {
     console.log('Error')
     return;
   }
-  // if (!closeButtons)
 
   const overflow = document.createElement('div');
   overflow.classList.add('overflow-body');

@@ -15,13 +15,13 @@ const sassGlob = require('gulp-sass-glob');
 const autoprefixer = require('gulp-autoprefixer');
 const csso = require('gulp-csso');
 const webpCss = require('gulp-webp-css');
+const groupMediaQueries = require('gulp-group-css-media-queries');
 
 const server = require('gulp-server-livereload');
 const clean = require('gulp-clean');
 const fs = require('fs');
 const rename = require('gulp-rename');
 const sourceMaps = require('gulp-sourcemaps');
-const groupMediaQueries = require('gulp-group-css-media-queries');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 
@@ -103,12 +103,12 @@ gulp.task('scss:prod', function () {
     .pipe(plumber(plumberNotify('Styles')))
     .pipe(sassGlob())
     // .pipe(webpCss())
-    .pipe(groupMediaQueries())
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
     }))
-    // .pipe(csso())
+    .pipe(groupMediaQueries())
+    .pipe(csso())
     .pipe(rename('styles.css'))
     .pipe(gulp.dest('./dist/'))
 });

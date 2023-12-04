@@ -57,7 +57,7 @@
       @@include('./html-blocks/our-production-list.html')
       <div class="mt-1 df--ai-c--jc-c">
         <a class="button violet mr-m" href="./files/Dolce-catalog.pdf" download>Скачать каталог</a>
-        <a class="button blue">Получить прайс</a>
+        <button class="button blue js-modal-request-buttons">Получить прайс</button>
       </div>
     </div>
   </section>
@@ -165,6 +165,18 @@
 
   <script src="./js/index.bundle.js"></script>
 
+  <div class="modal js-modal-request">
+    <div class="modal-wrapper">
+      <h6>Прайс лист доступен юридическим лицам, для получения необходимо заполнить данные</h6>
+      <div class="modal-buttons-block">
+        <button class="button corp-violet mr-m">Заполнить</button>
+        <button class="button button-light js-modal-button-close">Закрыть</button>
+      </div>
+      <form action="#">
+
+      </form>
+    </div>
+  </div>
 
 </body>
 <!-- 576px 768px 992px 1200px -->
