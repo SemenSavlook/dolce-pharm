@@ -251,6 +251,6 @@ gulp.task('default', gulp.series(
 // Сборка prod
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('html:prod', 'scss:prod', 'images:prod', 'fonts', 'files', 'js'),
+  gulp.parallel('filesToRoot', 'html:prod', 'scss:prod', 'images:prod', 'fonts', 'files', 'js'),
   gulp.parallel('server')
 ));

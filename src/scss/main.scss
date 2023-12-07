@@ -1,5 +1,8 @@
 @import './fonts.scss';
 @import './normalize&zero.scss';
+@import './swiper.scss';
+// @import '../../node_modules/swiper/modules/autoplay.scss';
+
 
 
 :root {
@@ -247,8 +250,3 @@ h3 {
 @import './blocks-scss/advantages';
 @import './blocks-scss/reviews';
 @import './blocks-scss/modals';
-
-// .swiper {
-//   width: 600px;
-//   height: 300px;
-// }
