@@ -9,7 +9,8 @@
   --font: "Inter", sans-serif;
   --font-light: "InterLight", sans-serif;
   --title-font: "InterSemiBold", sans-serif;
-  --corp-violet: #4f007d;
+  --corp-violet: #550f81;
+  // --corp-violet: #4f007d;
   --violet: #660066;
   --blue: #34226B;
   --p: 24px;
@@ -92,13 +93,16 @@ h3 {
 }
 
 .overflow-body {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
+  display: block;
   background-color: rgba(15, 20, 24, 0.5);
   position: fixed;
   top: 0;
   left: 0;
-  // z-index: 50;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
 }
 
 .padding {

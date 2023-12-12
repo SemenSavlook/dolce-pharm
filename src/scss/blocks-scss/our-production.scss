@@ -30,7 +30,6 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 
   .text {
@@ -38,12 +37,6 @@
     font-size: 16px;
   }
 
-  .quantity {
-    margin-top: 10px;
-    font-size: 14px;
-    font-family: var(--font-light);
-    color: #666666;
-  }
 }
 
 .our-production h2 {
@@ -138,10 +131,6 @@
 
   .our-production ul .text {
     font-size: 13px;
-  }
-
-  .our-production ul .quantity {
-    font-size: 11px;
   }
 
   .our-production ul img {
