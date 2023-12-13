@@ -7,45 +7,33 @@
 
 <body>
   @@include('./html-blocks/svg-sprite.svg')
+  @@include('./html-blocks/svg-sprite-advantages.svg')
 
   @@include('./html-blocks/header.html')
 
   <main>
-    <section class="baner mt-0-25">
-      <h1 class="visually-hidden">Акционные предложения на медецинские изделия</h1>
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./img/temp-01.jpg" alt="">
+
+    @@include('./html-blocks/main-baner.html')
+
+    <section class="about-us-wrapper mt-1-5">
+      <div class="about-us">
+        <div class="about-us--title">
+          <div class="logo">
+            <img src="./img/logo-Dolce-Pharm.png" alt="Logo Dolce pharm">
           </div>
-          <div class="swiper-slide">
-            <img src="./img/temp-01.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="./img/temp-01.jpg" alt="">
-          </div>
+          <h2 class="mt-1">Ведущий производитель и&nbsp;дистрибьютер<br>медицинских изделий в&nbsp;Казахстане</h2>
         </div>
-      </div>
-    </section>
 
-    <section class="about-us mt-1-5">
-
-      <div class="about-us--title">
-        <div class="logo">
-          <img src="./img/logo-Dolce-Pharm.png" alt="Logo Dolce pharm">
-        </div>
-        <h2 class="mt-1">Ведущий производитель и&nbsp;дистрибьютер<br>медицинских изделий в&nbsp;Казахстане</h2>
-      </div>
-
-      <div class="about-us--descr mt-0-75">
-        <div class="container">
-          <p>
-            На&nbsp;протяжении 25-ти лет мы&nbsp;обеспечиваем защиту врачей и&nbsp;пациентов, предотвращая
-            послеоперационные
-            осложнения и&nbsp;внутрибольничные инфекции. Исключаем репутационные риски и
-            заботимся о&nbsp;вашем бюджете, бесперебойно поставляя
-            одноразовые медицинские изделия.
-          </p>
+        <div class="about-us--descr mt-0-75">
+          <div class="container">
+            <p>
+              На&nbsp;протяжении 25-ти лет мы&nbsp;обеспечиваем защиту врачей и&nbsp;пациентов, предотвращая
+              послеоперационные
+              осложнения и&nbsp;внутрибольничные инфекции. Исключаем репутационные риски и
+              заботимся о&nbsp;вашем бюджете, бесперебойно поставляя
+              одноразовые медицинские изделия.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -74,48 +62,7 @@
     </div>
   </section>
 
-  <section class="advantages mt-1-5">
-    <div class="container">
-      <h3>Сложности при заказе медицинских изделий</h3>
-      <ul class="negatives m-0-a">
-        <li>
-          <span>1</span>
-          <p>Маленький ассортимент продукции</p>
-        </li>
-        <li>
-          <span>2</span>
-          <p>Отсутствие или перегруженность складов</p>
-        </li>
-        <li>
-          <span>3</span>
-          <p>Отсутствие у поставщиков программ лояльности и гибкой системы скидок</p>
-        </li>
-        <li>
-          <span>4</span>
-          <p>Нет индивидуального подхода и учёта потребностей компании</p>
-        </li>
-      </ul>
-    </div>
-
-    <div class="positive mt-1">
-      <div class="container padding">
-        <h3>Преимущества работы с&nbsp;DOLCE&nbsp;PHARM</h3>
-        <ul class="mt-0-75">
-          <li><span>✔</span>Экономия Вашего бюджета</li>
-          <li><span>✔</span>Широкий ассортимент продукции и&nbsp;Международные стандарты качества</li>
-          <li><span>✔</span>Эксклюзивные продукты на&nbsp;рынке медицинских изделий</li>
-          <li><span>✔</span>Программа лояльности</li>
-          <li><span>✔</span>Партнёрские программы</li>
-          <li><span>✔</span>Наличие складских помещений</li>
-          <li><span>✔</span>Защита от внутрибольничных и&nbsp;других инфекций</li>
-          <li><span>✔</span>Гибкая система оплаты</li>
-          <li><span>✔</span>Высокий уровень сервиса</li>
-          <li><span>✔</span>Конфиденциальность</li>
-        </ul>
-      </div>
-    </div>
-
-  </section>
+  @@include('./html-blocks/advantages.html')
 
   <section class="made-in-kaz mt-1-5">
     <div class="container made-in-kaz-wrapper">

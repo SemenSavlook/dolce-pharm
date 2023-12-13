@@ -1,8 +1,6 @@
 @import './fonts.scss';
 @import './normalize&zero.scss';
 @import './swiper.scss';
-// @import '../../node_modules/swiper/modules/autoplay.scss';
-
 
 
 :root {
@@ -10,7 +8,7 @@
   --font-light: "InterLight", sans-serif;
   --title-font: "InterSemiBold", sans-serif;
   --corp-violet: #550f81;
-  // --corp-violet: #4f007d;
+  --corp-violet-dark: #4f007d;
   --violet: #660066;
   --blue: #34226B;
   --p: 24px;
@@ -43,11 +41,12 @@ button {
 .button {
   transition: all .25s linear;
   border-radius: 8px;
-  font-size: .5rem;
+  font-size: .45rem;
   display: inline-block;
   padding: 12px;
   color: white;
   cursor: pointer;
+  position: relative;
 }
 
 .button:hover {
@@ -68,6 +67,8 @@ h2 {
   font-size: 1.2rem;
   font-family: var(--title-font);
   text-align: center;
+  font-weight: 600;
+  color: var(--corp-violet-dark);
 }
 
 h3 {
@@ -75,6 +76,7 @@ h3 {
   font-family: var(--title-font);
   color: var(--violet);
   text-align: center;
+  font-weight: 600;
 }
 
 .full-warpper {
@@ -88,7 +90,7 @@ h3 {
 
 .container {
   max-width: 1660px;
-  padding: 20px 30px;
+  padding: 15px 30px;
   margin: 0 auto;
 }
 
@@ -199,9 +201,8 @@ h3 {
   color: white;
 }
 
-.baner {
-  max-width: 1600px;
-  margin: 0 auto;
+.orange {
+  background-color: #F48120;
 }
 
 @media (max-width: 1200px) {
@@ -246,11 +247,12 @@ h3 {
 }
 
 @import './blocks-scss/header';
+@import './blocks-scss/main-baner.scss';
 @import './blocks-scss/about-us';
-@import './blocks-scss/footer';
 @import './blocks-scss/our-production.scss';
 @import './blocks-scss/offer';
 @import './blocks-scss/made-in-kaz.scss';
 @import './blocks-scss/advantages';
 @import './blocks-scss/reviews';
 @import './blocks-scss/modals';
+@import './blocks-scss/footer';

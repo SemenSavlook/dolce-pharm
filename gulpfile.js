@@ -126,9 +126,9 @@ gulp.task('images:prod', function () {
   return gulp
     .src('./src/img/**/*')
     // .pipe(webp())
+    .pipe(imagemin({ verbose: true }))
     .pipe(gulp.dest('./dist/img/'))
   // .pipe(gulp.src([ './dist/img/**/*.+(png|jpg|bmp|jpeg|jpeg2)', '!./dist/img/**/*.+(webp|svg)' ]))
-  // .pipe(imagemin({ verbose: true }))
   // .pipe(gulp.dest('./dist/img/'));
 });
 

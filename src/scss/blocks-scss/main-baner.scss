@@ -1,0 +1,63 @@
+.baner {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.main-baner-button {
+  font-size: 30px;
+  position: absolute;
+  bottom: 3.5%;
+  left: 6.25%;
+  transition: all .2s linear;
+  border-radius: 8px;
+  border: 2px solid white;
+  display: inline-block;
+  padding: 12px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.main-baner-button:hover {
+  box-shadow: 1px 1px 5px 1px rgba(15, 20, 24, 0.35);
+  transform: translateY(-1px);
+  background-color: #eb7a1e;
+}
+
+@media (max-width: 1200px) {
+  .main-baner-button {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-baner-button {
+    font-size: 25px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 880px) {
+  .main-baner-button {
+    font-size: 23px;
+    padding: 9px 11px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-baner-button {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main-baner-button {
+    font-size: 18px;
+    padding: 9px;
+  }
+}
+
+@media (max-width: 576px) {
+  .main-baner-button {
+    font-size: 16px;
+  }
+}
