@@ -27,6 +27,7 @@
   }
 }
 
+
 .positive {
   background-image: url('./img/advantages-bg.jpg');
   background-repeat: no-repeat;
@@ -34,7 +35,7 @@
   background-color: #e0eaf4;
   background-size: cover;
   color: white;
-  font-size: .6rem;
+  font-size: .55rem;
   max-width: 1920px;
   margin: 0 auto;
   padding-top: 1.5rem;
@@ -47,10 +48,16 @@
   svg {
     max-width: 80px;
     height: 70px;
+    opacity: .9;
+  }
+
+  p {
+    margin-top: 25px;
   }
 }
 
 .positive-wrapper {
+  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -65,9 +72,6 @@
   text-align: center;
   width: 25%;
 
-  p {
-    margin-top: 15px;
-  }
 }
 
 .positive-item:nth-child(-n+4) {
@@ -78,7 +82,6 @@
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-
 @media (max-width: 1200px) {
   .positive {
     font-size: 18px;
@@ -86,6 +89,10 @@
 
   .positive svg {
     height: 60px;
+  }
+
+  .positive p {
+    margin-top: 15px;
   }
 }
 
@@ -100,9 +107,34 @@
 }
 
 @media (max-width: 880px) {
+  .positive {
+    font-size: 15px;
+  }
 
   .positive svg {
     height: 50px;
+  }
+}
+
+@media (max-width: 835px) {
+  .positive-item {
+    width: 50%;
+  }
+
+  .positive-item:not(:nth-child(4)):not(:nth-child(8)) {
+    border-right: none;
+  }
+
+  .positive-wrapper .positive-item:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .positive-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .positive-item:nth-child(7) {
+    border-bottom: 0;
   }
 }
 
@@ -113,14 +145,18 @@
   }
 }
 
-@media (max-width: 650px) {}
-
-@media (max-width: 576px) {}
-
 @media (max-width: 490px) {
 
   .negatives li p {
     font-size: 18px;
+  }
+
+  .positive-item {
+    padding: 25px 20px;
+  }
+
+  .positive svg {
+    height: 40px;
   }
 }
 
@@ -133,6 +169,18 @@
   .negatives li p {
     font-size: 16px;
   }
+
+  .positive {
+    font-size: 13px;
+  }
 }
 
-@media (max-width: 350px) {}
+@media (max-width: 350px) {
+  .positive {
+    font-size: 12px;
+  }
+
+  .positive-item {
+    padding: 20px 15px;
+  }
+}
