@@ -45,7 +45,7 @@
       @@include('./html-blocks/our-production-list.html')
       <div class="mt-1 df--ai-c--jc-c">
         <a class="button violet mr-m" href="./files/Dolce-catalog.pdf" target="_blank">Скачать каталог</a>
-        <button class="button blue js-modal-request-buttons">Получить прайс</button>
+        <button class="button blue js-modal-request-price">Получить прайс</button>
       </div>
     </div>
   </section>
@@ -112,15 +112,8 @@
 
   <script src="./js/index.bundle.js"></script>
 
-  <div class="modal js-modal-request">
+  <div class="modal js-request-price-modal">
     <div class="modal-wrapper">
-      <div class="modal-before">
-        <h6>Прайс лист доступен юридическим лицам, для&nbsp;получения необходимо заполнить данные</h6>
-        <div class="modal-buttons-block">
-          <button class="button corp-violet mr-m" id="modal-request-coninue-button">Заполнить</button>
-          <button class="button button-light js-modal-button-close">Закрыть</button>
-        </div>
-      </div>
       <div class="modal-after">
         <form action="#" id="js-modal-request-form">
           <h5>Заполните форму</h5>
@@ -128,10 +121,11 @@
           <input type="text" placeholder="Название компании" name="company" required>
           <input type="tel" placeholder="Телефон" name="phone" required>
           <input type="email" placeholder="Электронная почта" name="email" required>
+          <span class="warning">Необходимо заполнить все поля</span>
           <div class="modal-buttons-block">
             <button class="button corp-violet mr-m" type="submit" id="modal-submit-request" disabled>Получить
               прайс</button>
-            <button class="button button-light js-modal-button-close">Закрыть</button>
+            <button class="button button-light js-modal-price-button-close">Закрыть</button>
           </div>
         </form>
       </div>

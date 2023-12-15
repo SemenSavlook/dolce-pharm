@@ -1,43 +1,37 @@
-export default function modalRequest() {
-  const modal = document.querySelector('.js-modal-request');
-  const requestButtons = document.querySelectorAll('.js-modal-request-buttons');
-  const closeButtons = document.querySelectorAll('.js-modal-button-close');
-  const continueButton = document.querySelector('#modal-request-coninue-button');
-  const modalBeforeBlock = document.querySelector('.modal-before');
-  const modalAfterBlock = document.querySelector('.modal-after');
+export default function modalRequestPrice() {
+  const modal = document.querySelector('.js-request-price-modal');
+  const requestPriceButtons = document.querySelectorAll('.js-modal-request-price');
+  const closeButton = document.querySelector('.js-modal-price-button-close');
+  const body = document.body;
 
-  function closeModal(e) {
+  if (!(modal && requestPriceButtons && closeButton)) {
+    console.log('ModalRequestPrice Error')
+    return
+  }
+
+  function missClickCloseModal(e) {
     if (!e.target.closest('.modal-wrapper')) {
-      modal.classList.remove('visible');
-      modalBeforeBlock.style.display = '';
-      modalAfterBlock.style.display = '';
+      closeModal();
     }
-    // window.removeEventListener('mouseup', closeModal)
   }
 
-  continueButton.addEventListener('click', () => {
-    modalBeforeBlock.style.display = 'none';
-    modalAfterBlock.style.display = 'block';
-  })
 
-  function modalCloseHandler() {
-    window.addEventListener('mouseup', closeModal)
+  function showModal() {
+    body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
+    modal.classList.add('visible');
+    body.style.overflow = 'hidden';
+    window.addEventListener('mouseup', missClickCloseModal)
   }
 
-  modalCloseHandler();
+  function closeModal() {
+    modal.classList.remove('visible');
+    body.style.overflow = '';
+    body.style.paddingRight = '';
+    window.removeEventListener('mouseup', missClickCloseModal)
+  }
 
-  closeButtons.forEach(e => {
-    e.addEventListener('click', (e) => {
-      e.preventDefault()
-      console.log(e)
-      modal.classList.remove('visible')
-    })
-  })
+  requestPriceButtons.forEach((e) => e.addEventListener('click', showModal));
 
-  requestButtons.forEach((e) => {
-    e.addEventListener('click', () => {
-      modal.classList.add('visible');
-    })
-  })
+  closeButton.addEventListener('click', closeModal);
 
 }

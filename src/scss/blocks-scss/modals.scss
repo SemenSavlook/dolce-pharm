@@ -90,8 +90,8 @@
 }
 
 .modal {
-  display: none;
   padding: 20px;
+  display: none;
 
   .modal-wrapper {
     position: relative;
@@ -125,6 +125,13 @@
     align-items: center;
     justify-content: center;
   }
+
+  .warning {
+    color: red;
+    margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .modal.visible {
@@ -139,20 +146,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
 }
 
 .modal button:disabled {
   opacity: .25;
 }
 
-.modal-before {
-  max-width: 500px;
-}
-
 .modal-after {
-  display: none;
   width: 350px;
-  // display: flex;
 }
 
 .modal-after input {

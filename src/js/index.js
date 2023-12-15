@@ -1,5 +1,5 @@
 import modalPhoneHandler from "./modules/modal-phones";
-import modalRequest from "./modules/modal-request";
+import modalRequestPrice from "./modules/modal-request";
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
@@ -27,5 +27,5 @@ window.addEventListener('DOMContentLoaded', () => {
   });
   // console.dir(swiper)
   modalPhoneHandler();
-  modalRequest();
+  modalRequestPrice();
 })
