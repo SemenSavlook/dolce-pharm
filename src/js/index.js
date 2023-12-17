@@ -3,6 +3,8 @@ import modalRequestPrice from "./modules/modal-request";
 import Swiper from 'swiper';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
+import { Fancybox } from "@fancyapps/ui";
+
 window.addEventListener('DOMContentLoaded', () => {
   // eslint-disable-next-line no-unused-vars
   const swiper = new Swiper('.swiper', {
@@ -25,7 +27,17 @@ window.addEventListener('DOMContentLoaded', () => {
       prevEl: '.swiper-button-prev',
     },
   });
-  // console.dir(swiper)
-  modalPhoneHandler();
-  modalRequestPrice();
+
+  modalPhoneHandler(swiper);
+  modalRequestPrice(swiper);
+
+  Fancybox.bind("[data-fancybox]", {
+    Toolbar: {
+      display: {
+        left: [ "infobar" ],
+        right: [ "thumbs", "close" ],
+      },
+    },
+  });
+
 })

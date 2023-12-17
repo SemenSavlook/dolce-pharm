@@ -4,7 +4,7 @@
 }
 
 .main-baner-button {
-  font-size: 30px;
+  font-size: 25px;
   position: absolute;
   bottom: 3.5%;
   left: 6.25%;
@@ -25,39 +25,41 @@
 
 @media (max-width: 1200px) {
   .main-baner-button {
-    font-size: 27px;
+    font-size: 23px;
   }
 }
 
 @media (max-width: 992px) {
   .main-baner-button {
-    font-size: 25px;
+    font-size: 21px;
     padding: 10px 12px;
   }
 }
 
 @media (max-width: 880px) {
   .main-baner-button {
-    font-size: 23px;
+    font-size: 19px;
     padding: 9px 11px;
   }
 }
 
 @media (max-width: 768px) {
   .main-baner-button {
-    font-size: 20px;
+    font-size: 17px;
+    padding: 7px 9px;
   }
 }
 
 @media (max-width: 650px) {
   .main-baner-button {
-    font-size: 18px;
-    padding: 9px;
+    font-size: 15px;
+    padding: 6px 8px;
   }
 }
 
 @media (max-width: 576px) {
   .main-baner-button {
-    font-size: 16px;
+    font-size: 13px;
+    padding: 6px 7px;
   }
 }

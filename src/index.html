@@ -78,35 +78,7 @@
     </div>
   </section>
 
-  <section class="reviews mt-1-5">
-    <h3>Отзывы наших клиентов</h3>
-    <div class="container reviews--block">
-      <div class="reviews--item">
-        <div class="reviews--item__image">
-          <img src="./img/reviews/rev-abdi-745x1024.jpg" alt="">
-        </div>
-        <p class="mt-0-5">Abdi</p>
-      </div>
-      <div class="reviews--item">
-        <div class="reviews--item__image">
-          <img src="./img/reviews/rev-adal-745x1024.jpg" alt="">
-        </div>
-        <p class="mt-0-5">Adal</p>
-      </div>
-      <div class="reviews--item">
-        <div class="reviews--item__image">
-          <img src="./img/reviews/rev-galaxy-745x1024.jpg" alt="">
-        </div>
-        <p class="mt-0-5">Galaxy</p>
-      </div>
-      <div class="reviews--item">
-        <div class="reviews--item__image">
-          <img src="./img/reviews/rev-hosp-745x1024.jpg" alt="">
-        </div>
-        <p class="mt-0-5">Родильный дом №1</p>
-      </div>
-    </div>
-  </section>
+  @@include('./html-blocks/reviews.html')
 
   @@include('./html-blocks/footer.html')
 
@@ -117,10 +89,10 @@
       <div class="modal-after">
         <form action="#" id="js-modal-request-form">
           <h5>Заполните форму</h5>
-          <input type="text" placeholder="Введите ваше имя" name="full-name" required>
-          <input type="text" placeholder="Название компании" name="company" required>
-          <input type="tel" placeholder="Телефон" name="phone" required>
-          <input type="email" placeholder="Электронная почта" name="email" required>
+          <input type="text" placeholder="Введите ваше имя" name="full-name">
+          <input type="text" placeholder="Название компании" name="company">
+          <input type="tel" placeholder="Телефон" name="phone">
+          <input type="email" placeholder="Электронная почта" name="email">
           <span class="warning">Необходимо заполнить все поля</span>
           <div class="modal-buttons-block">
             <button class="button corp-violet mr-m" type="submit" id="modal-submit-request" disabled>Получить

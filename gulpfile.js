@@ -27,6 +27,7 @@ const notify = require('gulp-notify');
 
 const webpack = require('webpack-stream');
 const babel = require('gulp-babel');
+const TerserPlugin = require('terser-webpack-plugin');
 
 // images
 const imagemin = require('gulp-imagemin');
@@ -160,7 +161,7 @@ gulp.task('filesToRoot', function () {
 // Обработка JS файлов
 
 const configDev = {
-  mode: 'production',
+  mode: 'development',
   entry: {
     index: './src/js/index.js',
     // несколько js файлов
@@ -192,10 +193,37 @@ const configProd = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              [
+                '@babel/preset-env',
+                {
+                  targets: '> 2%, not dead',
+                },
+              ],
+            ],
+          },
+        },
+      },
+      {
         test: /\.css$/,
         use: [ 'style-loader', 'css-loader' ],
       }
     ]
+  },
+  optimization: {
+    minimizer: [ new TerserPlugin({
+      terserOptions: {
+        format: {
+          comments: false,
+        },
+      },
+      extractComments: false,
+    }) ],
   }
 
 }
@@ -235,9 +263,9 @@ gulp.task('server', function () {
 gulp.task('watch', function () {
   gulp.watch('./src/scss/**/*.scss', gulp.parallel('scss'));
   gulp.watch('./src/**/*.html', gulp.parallel('html'));
-  gulp.watch('./src/img/**.*', gulp.parallel('images'));
+  gulp.watch('./src/img/**/*.*', gulp.parallel('images'));
   gulp.watch('./src/img/**.*', gulp.parallel('fonts'));
-  gulp.watch('./src/img/**.*', gulp.parallel('files'));
+  gulp.watch('./src/files/**.*', gulp.parallel('files'));
   gulp.watch('./src/js/**/*.*', gulp.parallel('js'));
 });
 
@@ -251,6 +279,6 @@ gulp.task('default', gulp.series(
 // Сборка prod
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('filesToRoot', 'html:prod', 'scss:prod', 'images:prod', 'fonts', 'files', 'js'),
+  gulp.parallel('filesToRoot', 'html:prod', 'scss:prod', 'images:prod', 'fonts', 'files', 'js:prod'),
   gulp.parallel('server')
 ));

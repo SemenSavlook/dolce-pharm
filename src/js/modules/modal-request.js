@@ -1,4 +1,4 @@
-export default function modalRequestPrice() {
+export default function modalRequestPrice(swiper) {
   const modal = document.querySelector('.js-request-price-modal');
   const requestPriceButtons = document.querySelectorAll('.js-modal-request-price');
   const closeButton = document.querySelector('.js-modal-price-button-close');
@@ -20,14 +20,16 @@ export default function modalRequestPrice() {
     body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
     modal.classList.add('visible');
     body.style.overflow = 'hidden';
-    window.addEventListener('mouseup', missClickCloseModal)
+    window.addEventListener('mouseup', missClickCloseModal);
+    swiper.autoplay.pause();
   }
 
   function closeModal() {
     modal.classList.remove('visible');
     body.style.overflow = '';
     body.style.paddingRight = '';
-    window.removeEventListener('mouseup', missClickCloseModal)
+    window.removeEventListener('mouseup', missClickCloseModal);
+    swiper.autoplay.resume();
   }
 
   requestPriceButtons.forEach((e) => e.addEventListener('click', showModal));
