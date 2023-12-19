@@ -185,6 +185,13 @@
   }
 }
 
+@media (max-width: 460px) {
+  .modal-after {
+    max-width: 350px;
+  }
+}
+
+
 @media (max-width: 400px) {
   .modal-phone--list label {
     font-size: 15px;
