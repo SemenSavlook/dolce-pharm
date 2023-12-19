@@ -38,28 +38,35 @@
 
 @media (max-width: 880px) {
   .main-baner-button {
-    font-size: 19px;
+    font-size: 20px;
     padding: 9px 11px;
   }
 }
 
 @media (max-width: 768px) {
   .main-baner-button {
-    font-size: 17px;
+    font-size: 18px;
     padding: 7px 9px;
   }
 }
 
 @media (max-width: 650px) {
   .main-baner-button {
-    font-size: 15px;
+    font-size: 16px;
     padding: 6px 8px;
   }
 }
 
 @media (max-width: 576px) {
   .main-baner-button {
-    font-size: 13px;
+    font-size: 14px;
     padding: 6px 7px;
+    bottom: 3%;
+  }
+}
+
+@media (max-width: 460px) {
+  .main-baner-button {
+    bottom: 2.5%;
   }
 }

@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
     modules: [ Navigation, Pagination, Autoplay ],
     loop: true,
     speed: 2000,
-    spaceBetween: 50,
+    spaceBetween: 0,
     autoplay: {
       delay: 5000,
       // disableOnInteraction: true,
@@ -26,6 +26,14 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+  });
+
+  const mobSwiper = new Swiper('.mobSwiper', {
+    modules: [ Navigation, Pagination, Autoplay ],
+    loop: true,
+    speed: 2000,
+    spaceBetween: 10,
+    autoplay: false
   });
 
   modalPhoneHandler(swiper);

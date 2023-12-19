@@ -25,15 +25,17 @@ export default function modalRequestPrice(swiper) {
   }
 
   function closeModal() {
-    modal.classList.remove('visible');
-    body.style.overflow = '';
-    body.style.paddingRight = '';
     window.removeEventListener('mouseup', missClickCloseModal);
     swiper.autoplay.resume();
+    modal.classList.remove('visible');
+    body.style.paddingRight = '';
+    body.style.overflow = '';
   }
 
   requestPriceButtons.forEach((e) => e.addEventListener('click', showModal));
 
-  closeButton.addEventListener('click', closeModal);
-
+  closeButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    closeModal()
+  });
 }

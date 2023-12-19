@@ -92,6 +92,7 @@
   display: none;
 
   .modal-wrapper {
+    max-width: 410px;
     position: relative;
     top: -20px;
     border-radius: 8px;
@@ -187,7 +188,12 @@
 
 @media (max-width: 460px) {
   .modal-after {
-    max-width: 350px;
+    width: auto;
+  }
+
+  .modal-close svg {
+    width: 25px;
+    height: 25px;
   }
 }
 
