@@ -157,7 +157,14 @@
   .our-production .ul .text {
     font-size: 13px;
   }
+}
 
+@media (max-width: 390px) {
+
+  .our-production .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 15px;
+    margin: 0 4px;
+  }
 }
 
 @media (max-width: 350px) {

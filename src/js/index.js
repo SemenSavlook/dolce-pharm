@@ -53,11 +53,11 @@ function checkWindowSize() {
   if (window.innerWidth < 576) {
     var mobSwiper = new Swiper('.mobSwiper', {
       modules: [ Navigation, Pagination, Autoplay ],
-      loop: false,
-      speed: 1500,
+      loop: true,
+      speed: 2500,
       spaceBetween: 10,
       autoplay: {
-        delay: 6000,
+        delay: 5000,
         stopOnLastSlide: true,
         pauseOnMouseEnter: true
       },
