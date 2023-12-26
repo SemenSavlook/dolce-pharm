@@ -1,37 +1,19 @@
 import modalPhoneHandler from "./modules/modal-phones";
 import modalRequestPrice from "./modules/modal-request";
 import orderButtonHandler from "./modules/order-Button-handler";
+import mainBanerSwiper from "./modules/main-baner-swiper";
 import mobileSwiperHandler from "./modules/mob-swiper-Hanlder";
-
-import Swiper from 'swiper';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import animationObserver from "./modules/animation-observer";
 
 import { Fancybox } from "@fancyapps/ui";
 
 window.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper('.swiper', {
-    modules: [ Navigation, Pagination, Autoplay ],
-    loop: true,
-    speed: 2000,
-    spaceBetween: 0,
-    autoplay: {
-      delay: 5000,
-      // disableOnInteraction: true,
-      pauseOnMouseEnter: true
-    },
 
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+  animationObserver('.positive .oserver-animation', 'oserver-animation--flag');
+  animationObserver('.negatives .observer', 'observer');
 
-  modalPhoneHandler(swiper);
-  modalRequestPrice(swiper);
+  modalPhoneHandler(mainBanerSwiper);
+  modalRequestPrice(mainBanerSwiper);
   orderButtonHandler('.js-getOrder-button', 'https://wa.me/+77711041201');
 
   const mobileSwiperElement = document.querySelector('.js-mobSwiper');

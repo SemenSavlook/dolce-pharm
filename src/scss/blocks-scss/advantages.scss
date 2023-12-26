@@ -10,11 +10,14 @@
     display: flex;
     align-items: center;
     padding: 20px 0;
-
+    position: relative;
 
     p {
       display: inline-block;
       font-size: 24px;
+      position: relative;
+      transition: all .75s ease-out;
+      top: 0;
     }
 
     span {
@@ -23,9 +26,23 @@
       font-size: 36px;
       color: #801549;
       font-family: var(--font-light);
+      position: relative;
+      transition: all .75s ease-out;
+      top: 0;
     }
   }
+
+  .observer span {
+    opacity: 0;
+    top: -20px;
+  }
+
+  .observer p {
+    opacity: 0;
+    top: 20px;
+  }
 }
+
 
 
 .positive {
@@ -43,6 +60,7 @@
 
   h3 {
     color: white;
+    padding: 0 15px;
   }
 
   svg {
@@ -68,10 +86,9 @@
 
 .positive-item {
   max-width: 380px;
-  padding: 30px;
+  padding: 40px 30px;
   text-align: center;
   width: 25%;
-
 }
 
 .positive-item:nth-child(-n+4) {
@@ -81,6 +98,19 @@
 .positive-item:not(:nth-child(4)):not(:nth-child(8)) {
   border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
+
+.oserver-animation {
+  position: relative;
+  transition: all .75s ease-out;
+  top: 0;
+}
+
+.oserver-animation--flag {
+  top: 40px;
+  transform: scale(75%);
+  opacity: 0;
+}
+
 
 @media (max-width: 1200px) {
   .positive {
@@ -102,7 +132,7 @@
   }
 
   .positive-item {
-    padding: 25px;
+    padding: 35px 25px;
   }
 }
 
@@ -152,7 +182,7 @@
   }
 
   .positive-item {
-    padding: 25px 20px;
+    padding: 30px 20px;
   }
 
   .positive svg {
@@ -172,6 +202,7 @@
 
   .positive {
     font-size: 13px;
+    padding-bottom: 1rem;
   }
 }
 
@@ -181,6 +212,6 @@
   }
 
   .positive-item {
-    padding: 20px 15px;
+    padding: 25px 15px;
   }
 }
