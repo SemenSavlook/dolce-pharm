@@ -10,7 +10,7 @@ export default function animationObserver(selector, animationClass) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.remove(animationClass);
-        console.log('Intersecting');
+        // console.log('Intersecting');
         observer.unobserve(entry.target);
       }
     })

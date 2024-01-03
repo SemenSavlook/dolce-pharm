@@ -215,3 +215,18 @@
 .swiper-pagination-lock {
   display: none;
 }
+
+@media (max-width: 460px) {
+  .baner {
+    .swiper-pagination-bullet {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 4px;
+    }
+  }
+}

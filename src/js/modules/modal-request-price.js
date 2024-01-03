@@ -15,21 +15,30 @@ export default function modalRequestPrice(swiper) {
     }
   }
 
+  function escClickHandler(e) {
+    const key = e.key || e.keyCode;
+    if (key === 'Escape' || key === '27') {
+      closeModal()
+    }
+  }
+
+  // Закрытие модального окна
+  function closeModal() {
+    window.removeEventListener('mouseup', missClickCloseModal);
+    window.removeEventListener('keydown', escClickHandler);
+    swiper.autoplay.resume();
+    modal.classList.remove('visible');
+    body.style.paddingRight = '';
+    body.style.overflow = '';
+  }
 
   function showModal() {
     body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
     modal.classList.add('visible');
     body.style.overflow = 'hidden';
     window.addEventListener('mouseup', missClickCloseModal);
+    window.addEventListener('keydown', escClickHandler);
     swiper.autoplay.pause();
-  }
-
-  function closeModal() {
-    window.removeEventListener('mouseup', missClickCloseModal);
-    swiper.autoplay.resume();
-    modal.classList.remove('visible');
-    body.style.paddingRight = '';
-    body.style.overflow = '';
   }
 
   requestPriceButtons.forEach((e) => e.addEventListener('click', showModal));

@@ -4,7 +4,6 @@ export default function orderButtonHandler(selector, waNumber) {
     orderButtons.forEach((el) => {
       el.addEventListener('click', () => {
         var link = document.createElement("a");
-        link.classList.add('TEST')
         link.href = waNumber;
         link.target = "_blank";
         link.click();
