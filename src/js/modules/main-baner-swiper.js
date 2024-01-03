@@ -5,7 +5,7 @@ const mainBanerSwiper = new Swiper('.swiper', {
   modules: [ Navigation, Pagination, Autoplay ],
   loop: true,
   speed: 2000,
-  spaceBetween: 0,
+  spaceBetween: 10,
   autoplay: {
     delay: 5000,
     // disableOnInteraction: true,
