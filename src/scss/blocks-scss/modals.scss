@@ -102,7 +102,7 @@
   }
 
   button {
-    margin-top: 20px;
+    margin-top: 12px;
   }
 
   h6 {
@@ -127,9 +127,15 @@
 
   .warning {
     color: red;
+    display: inline-block;
     margin-top: 10px;
-    visibility: hidden;
+    transition: all .75s ease-out;
     opacity: 0;
+    font-size: 13px;
+  }
+
+  .warning.show {
+    opacity: 1;
   }
 }
 
