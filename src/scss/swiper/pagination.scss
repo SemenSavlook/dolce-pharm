@@ -230,3 +230,26 @@
     }
   }
 }
+
+@media (max-width: 390px) {
+  .baner {
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 3px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .baner {
+    .swiper-pagination-bullet {
+      width: 9px;
+      height: 9px;
+    }
+  }
+}

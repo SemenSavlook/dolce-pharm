@@ -1,5 +1,5 @@
 // Запрос прайс листа
-export default function modalRequestPrice(swiper) {
+export default function modalRequestPrice(swiper, pricePath) {
   const modal = document.querySelector('.js-request-price-modal');
   const requestPriceButtons = document.querySelectorAll('.js-modal-request-price');
   const closeButton = document.querySelector('.js-modal-price-button-close');
@@ -85,9 +85,12 @@ export default function modalRequestPrice(swiper) {
     }
 
     if (checkValidation()) {
-      console.log('sucsess');
-    } else {
-      console.log('invalid');
+      // Отправка данных на сервер
+      var link = document.createElement("a");
+      link.href = pricePath;
+      link.target = "_blank";
+      link.click();
+      link = null;
     }
   });
 
@@ -98,8 +101,6 @@ export default function modalRequestPrice(swiper) {
       telField.value = telField.value.slice(0, -1);
     }
   });
-
-  showModal();
 
   function checkName(element, message) {
     if (element.value.length > 1) {
@@ -120,19 +121,27 @@ export default function modalRequestPrice(swiper) {
     }
   }
 
+  function checkTel(element, message) {
+    if (element.value.length < 11) {
+      element.setCustomValidity(message);
+      return false;
+    } else {
+      element.setCustomValidity('');
+      return true;
+    }
+  }
+
   allInputs.forEach(el => el.addEventListener('input', () => el.setCustomValidity('')));
 
   function checkValidation() {
     if (checkName(nameField, 'Необходимо указать корректное имя')
       && checkName(companyField, 'Необходимо указать название компании')
+      && checkTel(telField, 'Необходимо указать корректный номер телефона')
       && checkEmail(emailField, 'Необходимо указать корректный e-mail')) {
       return true
     } else {
       form.reportValidity();
       return false
     }
-
-
   }
-
 }
