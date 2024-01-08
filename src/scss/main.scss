@@ -9,9 +9,10 @@
   --font-light: "InterLight", sans-serif;
   --title-font: "InterSemiBold", sans-serif;
   --corp-violet: #550f81;
+  --corp-violet-light: #62079b;
   --corp-violet-dark: #4f007d;
   --violet: #660066;
-  --blue: #34226B;
+  --blue: #422697;
   --p: 24px;
   font-size: 36px;
 }
@@ -192,6 +193,10 @@ h3 {
 
 .corp-violet {
   background-color: var(--corp-violet);
+}
+
+.corp-violet-light {
+  background-color: var(--corp-violet-light);
 }
 
 .blue {

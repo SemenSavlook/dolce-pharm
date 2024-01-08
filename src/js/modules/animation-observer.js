@@ -1,16 +1,16 @@
-const options = {
+const defOptions = {
   root: null,
   rootMargin: '0px',
   threshold: 1
 }
 
-export default function animationObserver(selector, animationClass) {
+export default function animationObserver(selector, animationClass, options = defOptions) {
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        console.log('888888')
         entry.target.classList.remove(animationClass);
-        // console.log('Intersecting');
         observer.unobserve(entry.target);
       }
     })

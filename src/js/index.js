@@ -13,6 +13,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // Анимации
   animationObserver('.positive .oserver-animation', 'oserver-animation--flag');
   animationObserver('.negatives .observer', 'observer');
+  animationObserver('.made-in-kaz .observer', 'observer', {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.75
+  });
 
   // Обработка кнопки связаться с нами в хеддере (остановка слайдера)
   modalPhoneHandler(mainBanerSwiper);
