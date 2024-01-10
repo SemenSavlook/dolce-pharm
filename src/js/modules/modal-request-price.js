@@ -1,5 +1,5 @@
 // Запрос прайс листа
-export default function modalRequestPrice(swiper, pricePath) {
+export default function modalRequestPrice(swiper, pricePath = './files/Price-December-2023.xlsx') {
   const modal = document.querySelector('.js-request-price-modal');
   const requestPriceButtons = document.querySelectorAll('.js-modal-request-price');
   const closeButton = document.querySelector('.js-modal-price-button-close');
@@ -17,7 +17,7 @@ export default function modalRequestPrice(swiper, pricePath) {
   var openFlag = false;
 
   if (!(modal && requestPriceButtons && closeButton && form)) {
-    console.log('ModalRequestPrice Error')
+    console.log('Modal Request Price Error')
     return
   }
 
@@ -91,6 +91,8 @@ export default function modalRequestPrice(swiper, pricePath) {
       link.target = "_blank";
       link.click();
       link = null;
+      formDataHandler(form);
+      closeModal();
     }
   });
 
@@ -143,5 +145,42 @@ export default function modalRequestPrice(swiper, pricePath) {
       form.reportValidity();
       return false
     }
+  }
+
+}
+
+async function formDataHandler(form) {
+  if (!form) {
+    console.log('Error form');
+    return
+  }
+  const formData = new FormData(form);
+
+  if (form.dataset.recipient) {
+    formData.set('recipient', form.dataset.recipient)
+  }
+
+  try {
+    const response = await fetch('PHPMailer/sendmail.php', {
+      method: 'POST',
+      body: formData,
+    });
+
+    console.log(response)
+
+    if (response.ok) {
+      this.form.classList.remove('sending');
+      console.log('submiting...');
+      const result = await response.json();
+      if (result.message === 'OK') {
+        form.reset();
+        console.log('Data transfered')
+      }
+    } else {
+      console.log('server error');
+    }
+
+  } catch (error) {
+    console.log(error);
   }
 }

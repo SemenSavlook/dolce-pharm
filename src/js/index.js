@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
   modalPhoneHandler(mainBanerSwiper);
 
   // Обработка кнопок запроса прайс-листа, (остановка слайдера)
-  modalRequestPrice(mainBanerSwiper, './files/Price-December-2023.xlsx');
+  modalRequestPrice(mainBanerSwiper);
 
   // Установка обработчика с классом '.js-getOrder-button', обработчика перехода в watsap
   orderButtonHandler('.js-getOrder-button', 'https://wa.me/+77711041201');
