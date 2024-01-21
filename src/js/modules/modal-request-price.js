@@ -1,5 +1,5 @@
 // Запрос прайс листа
-export default function modalRequestPrice(swiper, pricePath = './files/Price-December-2023.xlsx') {
+export default function modalRequestPrice(swiper, pricePath = './files/Price-list.xlsx') {
   const modal = document.querySelector('.js-request-price-modal');
   const requestPriceButtons = document.querySelectorAll('.js-modal-request-price');
   const closeButton = document.querySelector('.js-modal-price-button-close');
@@ -99,7 +99,7 @@ export default function modalRequestPrice(swiper, pricePath = './files/Price-Dec
   // Удаление не цифр
   telField.addEventListener('input', (e) => {
     if (!e.data) return;
-    if (!/[0-9()+]+/.test(e.data)) {
+    if (!/[0-9()+ ]+/.test(e.data)) {
       telField.value = telField.value.slice(0, -1);
     }
   });
@@ -166,10 +166,7 @@ async function formDataHandler(form) {
       body: formData,
     });
 
-    console.log(response)
-
     if (response.ok) {
-      this.form.classList.remove('sending');
       console.log('submiting...');
       const result = await response.json();
       if (result.message === 'OK') {

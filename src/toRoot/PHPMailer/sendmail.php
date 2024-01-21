@@ -9,20 +9,21 @@ require 'src/SMTP.php';
 
 $mail = new PHPMailer(true);
 try {
-  $mail->CharSet = 'utf-8';
+	$mail->SMTPDebug = 2;
+ 	$mail->isSMTP();
+	$mail->Host = 'smtp.gmail.com';
+	$mail->SMTPAuth = true;
+	$mail->Username = 'promodolcepharm@gmail.com';
+	$mail->Password = 'kwsg wldh sugr gzxa';
+	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+	$mail->Port = 465;
+    $mail->CharSet = 'utf-8';
 
-  $mail->setLanguage('ru', 'language/');
-  $mail->IsHTML(true);
+	$mail->setLanguage('ru', 'language/');
+	$mail->IsHTML(true);
 
-  $mail->setFrom('robot@dolcefarm.kz', 'robot-Dolce-Farm');
-
-  if(trim(!empty($_POST['recipient']))){
-    $mail->addAddress($_POST['recipient']);
-  } else {
-    $mail->addAddress('semensavluk@gmail.com');
-  }
-  
-  // $mail->addBCC('mariagoldstar@gmail.com');
+	$mail->setFrom('robot@dolcefarm.kz', 'robot-Dolce-Farm');
+  $mail->addAddress('vmarketolog@dolcepharm.kz');
   
   $mail->Subject = 'Заявка с сайта company.dolcepharm.kz - '.date("F j, Y, h:i");
 
@@ -34,7 +35,7 @@ try {
     $body.='<p>Имя не указано.</p>';
   }
 
-  if(trim(!empty($_POST['compnay']))){
+  if(trim(!empty($_POST['company']))){
     $body.='<p><b>Имя:</b> '.$_POST['company'].'</p>';
   } else {
     $body.='<p>Компания не указана.</p>';

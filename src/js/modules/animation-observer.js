@@ -9,7 +9,6 @@ export default function animationObserver(selector, animationClass, options = de
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        console.log('888888')
         entry.target.classList.remove(animationClass);
         observer.unobserve(entry.target);
       }
