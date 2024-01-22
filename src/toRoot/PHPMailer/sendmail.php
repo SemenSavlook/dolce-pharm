@@ -14,10 +14,10 @@ try {
 	$mail->Host = 'smtp.gmail.com';
 	$mail->SMTPAuth = true;
 	$mail->Username = 'promodolcepharm@gmail.com';
-	$mail->Password = 'kwsg wldh sugr gzxa';
+  // password here
 	$mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
 	$mail->Port = 465;
-    $mail->CharSet = 'utf-8';
+  $mail->CharSet = 'utf-8';
 
 	$mail->setLanguage('ru', 'language/');
 	$mail->IsHTML(true);
